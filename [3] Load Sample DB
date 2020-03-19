@@ -1,0 +1,13 @@
+-->To load sample Database:
+
+1. Download one on your machine. if in zip format, then unzip it.
+2. Launch MySQL server usinf root account.
+    mysql -u root -p
+3. Use source command to load DB in server
+    source <path of DB>
+    for e.g., 
+    source C:\Users\ayush.mittal\Downloads\mysqlsampledatabase\mysqlsampledatabase.sql
+4. After that, you can run following command to verify if your desired DB is added in server or not:
+    show databases;
+    
+reference : https://www.mysqltutorial.org/how-to-load-sample-database-into-mysql-database-server.aspx
