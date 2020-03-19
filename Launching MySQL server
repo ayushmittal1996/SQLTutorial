@@ -1,0 +1,10 @@
+To launch MySQL server:
+
+1. Go to the folder of MySQL > MySQL Server
+2. Inside, you will find mysql file.
+3. Open the file using command prompt.
+4. then login to your server account using below command
+   'mysql -u <username> -p'
+   then enter password
+   Probably, user would be root (by default) and password you should remember.
+5. Then you should see mysql> as location you are working in cmd.
