@@ -1,0 +1,16 @@
+--> SELECT query:
+Syntax : select <select_list> from <table_name>
+
+If you want to fetch all the columns then use "*" for <select_list> like:
+select * from <table_name>
+
+Note : Use * only if you wnat to see ad-hoc data.
+
+One should not use * in code for the following reasons:
+1. It makes query heavy and may load unnecessary data.
+2. If in future, tables gets updated, you will end up having different query result.
+
+So, always mention coulumn names in query, if required mention all of them.
+
+ref : https://www.mysqltutorial.org/mysql-select-statement-query-data.aspx
+
