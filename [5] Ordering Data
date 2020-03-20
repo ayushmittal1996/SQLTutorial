@@ -1,0 +1,21 @@
+Ordering Data using ORDERBY keyword :
+
+Syntax:
+SELECT 
+   select_list
+FROM 
+   table_name
+ORDER BY 
+   column1 [ASC|DESC], 
+   column2 [ASC|DESC],
+   ...;
+   
+ASC - ascending
+DESC - descending
+
+By default order is done in ascending.
+
+So, if you want to order result in ascending order the below two queries will work same:-
+
+select * from employee order by name asc;
+select * from employee order by name;
