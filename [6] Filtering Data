@@ -1,0 +1,129 @@
+There are multiple keywords to use for filtering data.
+
+Let's start with WHERE clause:
+
+Command :
+
+SELECT 
+    select_list
+FROM
+    table_name
+WHERE
+    search_condition;
+    
+For example:
+
+SELECT 
+    lastname, 
+    firstname, 
+    jobtitle
+FROM
+    employees
+WHERE
+    jobtitle = 'Sales Rep';
+    
+The above command will display 'lasname', 'firstname' and 'jobtitle' from 'employees' table if jobtitle = 'Sales Rep' for that row(data).
+
+Some Keyword which work with WHERE clause:
+
+************************************  1. AND : 
+
+--> To add multiple conditions, we can use AND keyword in following way:
+WHERE
+    jobtitle = 'Sales Rep' AND 
+    officeCode = 1;
+
+************************************  2. OR : 
+
+--> We can use OR keyword if we want all rows which are true of condition A or B or Both as:
+
+--> To add multiple conditions, we can use AND keyword in following way:
+WHERE
+    jobtitle = 'Sales Rep' OR 
+    officeCode = 1;
+
+************************************  3. BETWEEN :
+
+-->The BETWEEN operator returns TRUE if a value is in a range of values:
+
+WHERE
+    officeCode BETWEEN 1 AND 3
+
+This will select those rows which have office code between 1 and 3 (both including)
+
+************************************  4. LIKE :
+
+--> LIKE keyword can be used to filter on the basis of pattern, for eg:
+
+WHERE
+    lastName LIKE '%son'
+
+We can use '&' and '_' as follows:
+% - Any string of 0 or more characters
+_ - Any single character
+
+So, following are some example:
+
+%son - Any string ending with son like, myson, tyson, boson. But, sonu will not be selected
+son_ - Any string which has son with one more character like, sons, sonu, soni. But, son or rson will not belong to this pattern.
+
+************************************  5. IN :
+
+--> IN keyword helps in finding out rows based on a list of values:
+
+WHERE
+    officeCode IN (1 , 3, 4, 7)
+    
+Above filter will give rows which have office code either 1, 3, 4 or 7
+
+************************************  6. IS NULL : 
+
+--> IS NULL keyword can be used to find out those which does not have any value assigned.
+Note : It is not as same as 0. NULL are those spaces in database which have not assigned any value.
+
+SELECT 
+    lastName, 
+    firstName, 
+    reportsTo
+FROM
+    employees
+WHERE
+    reportsTo IS NULL;
+    
+Above filter will give those results for which employee's reportsTo colums is empty.
+
+7. Comparision Operators:
+
+We can use following comparision operators with WHERE clause:
+
+ '=', '!=' or <>, '<', '>', '<=', '>='
+
+Note : '!=' and <> both means NOT_EQUAL_TO
+
+************************************  7. LIMIT:
+
+LIMIT keword is used to limit the number of rows.
+It is being used to get the information of how the data has been stored in Table.
+Also, it can be used to get specified number of rows.
+
+SELECT 
+    select_list
+FROM
+    table_name
+LIMIT [offset,] row_count;
+
+In here, 
+offset - It is the row number from where first row need to be picked. First rows is 0th.
+row_count - It is the total number of rows need to be displayed.
+
+Note : offset is not mandatory paramter.
+
+Let's take following example:
+LIMIT 5 - Will display first 5 rows
+LIMIT 2, 5 - Will display 5 rows starting from 3rd row.
+LIMIT 0, 5 - Will display 5 rows starting from 0th row. Same as LIMIT 5
+
+
+Ref : 
+https://www.mysqltutorial.org/mysql-where/
+https://www.mysqltutorial.org/mysql-limit.aspx
