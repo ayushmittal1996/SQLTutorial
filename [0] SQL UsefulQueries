@@ -1,0 +1,28 @@
+--> To open sql in CMD : 
+1. Go to folder of SQL server -> bin
+2. Open CMD
+3. Type following command : mysql -u <username> -p
+4. Enter password and hit enter.
+You will be in sql terminal.
+
+SQL Commands:
+
+--> To see all Databases: SHOW DATABASES;
+--> To use database : USE <database_name>
+
+Note : Before using below commands you need to select one database by above USE command: 
+
+--> To see all tables : SHOW TABLES;
+
+Query Commands:
+
+--> To select data from table : SELECT <select_condition> FROM <tabke_name>
+--> To select ALL data from table : SELECT * FROM <tabke_name>
+
+Sorting Command :
+
+--> To sort selected data : SELECT <select_condition> FROM <tabke_name> ORDER BY <column_name1 [ASC|DESC], Column_name2 [ASC|DESC]...> 
+ASC - Ascending
+DESC - Descending
+Note : By default, data will be sorted in Ascending order only.
+
