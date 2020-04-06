@@ -1,1 +1,24 @@
-*
+A left join also requires a join-predicate. When joining two tables using a left join, 
+the concepts of left and right tables are introduced.
+
+For each row in the left table, the left join compares with every row in the right table as below:
+
+1. If the values in the two rows cause the join condition evaluates to true, 
+        then the left join creates a new row whose columns contain all columns of the rows in both tables and includes this row in the result set.
+
+2. If the values in the two rows are not matched, the left join clause still creates a new row such as 
+        a. available values for columns of the rows in the left table.
+        b. NULL for columns of the row in the right tablle.
+
+Typical format:
+
+SELECT column_list 
+FROM table_1 
+LEFT JOIN table_2 ON join_condition;
+
+If selected columns for comparison are same then USING keyword can be used:
+
+SELECT column_list 
+FROM table_1 
+LEFT JOIN table_2 USING (column_name);
+
