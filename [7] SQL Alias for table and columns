@@ -1,0 +1,46 @@
+Alias helps us to name the columns which we create by joining available columns.
+
+Typical format :
+
+SELECT 
+   [column_1 | expression] AS descriptive_name
+FROM table_name;
+
+If descriptive name contains space then,
+
+SELECT 
+   [column_1 | expression] AS `descriptive name`
+FROM 
+   table_name;
+
+For e.g.,
+
+Below statement will conactinate last name and full name using CONCAT_WS method.
+And the new data will be displayed in 'FullName' coulmn:
+
+*******************************************************************
+
+SELECT 
+    CONCAT_WS(', ', lastName, firstname) as FullName
+FROM
+    employees;
+
+The below command has space in new column name as "Full Name"
+
+SELECT 
+    CONCAT_WS(', ', lastName, firstname) as 'Full Name'
+FROM
+    employees;
+
+
+Similarly you can give alias to table name also:
+
+*******************************************************************
+
+SELECT 
+    e.firstName, 
+    e.lastName
+FROM
+    employees e
+ORDER BY e.firstName;
+
