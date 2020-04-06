@@ -7,7 +7,8 @@
    'mysql -u <username> -p'
    then enter password
    Probably, user would be root (by default) and password you should remember.
-5. Then you should see mysql> as location you are working in cmd.
+5. Then you should see mysql> as location you are working in cmd like -
+   mysql>
 
 *******************************************************************************************************************
 
