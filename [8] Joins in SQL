@@ -1,0 +1,13 @@
+Why Joins:
+
+For example, in the sample database, we have the ORDERS and  ORDERDETAILS tables that are linked using the ORDERNUMBER column:
+
+To get complete ORDERS’ information, you need to query data from both ORDERS and  ORDERDETAILS tables.
+
+There are 4 type of Joins in SQL:
+
+1. Inner join
+2. Left join
+3. Right join
+4. Cross join
+
