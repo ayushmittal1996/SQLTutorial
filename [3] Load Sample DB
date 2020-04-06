@@ -1,7 +1,7 @@
 -->To load sample Database:
 
 1. Download one on your machine. if in zip format, then unzip it.
-2. Launch MySQL server usinf root account.
+2. Launch MySQL server using root account.
     mysql -u root -p
 3. Use source command to load DB in server
     source <path of DB>
